@@ -1,25 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const publicRoutes = ["/login", "/signup"];
-
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  if (pathname.startsWith("/_next") || pathname.startsWith("/favicon")) {
-    return NextResponse.next();
-  }
-
-  const hasToken = Boolean(request.cookies.get("access_token")?.value);
-  const isPublic = publicRoutes.some((route) => pathname.startsWith(route));
-
-  if (!hasToken && !isPublic) {
-    return NextResponse.redirect(new URL("/login", request.url));
-  }
-
-  if (hasToken && isPublic) {
-    return NextResponse.redirect(new URL("/dashboard", request.url));
-  }
-
+  // In production this frontend is on a different domain than the API.
+  // API auth cookies are scoped to the API domain, so they aren't readable
+  // by frontend middleware cookies(). Enforce auth on backend endpoints.
+  void request;
   return NextResponse.next();
 }
 
