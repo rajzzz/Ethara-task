@@ -110,11 +110,4 @@ pytest -q
    ```
 5. Set backend env vars (`DATABASE_URL`, `JWT_*`, `FRONTEND_URL`, cookie settings)
 6. Deploy frontend service (Railway) with root directory `frontend` and `NEXT_PUBLIC_API_URL`
-
-## Submission
-- Live URL: `<add-live-url>`
-- GitHub repo: `<add-github-repo-url>`
-- Demo video (2–5 min): `<add-video-link>`
-
-## Notes
-- This project name is intentionally **Team Task Manager** to match assignment context; “Ethara” is the company, not the app name.
+   
