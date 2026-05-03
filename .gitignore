@@ -1,0 +1,95 @@
+# -----------------------------
+# OS / Filesystem noise
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Editor / IDE
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# Python (backend)
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+backend/.venv/
+backend/venv/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+
+# Coverage / test output
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Env files
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# -----------------------------
+# Node / Next.js (frontend)
+# -----------------------------
+node_modules/
+.npm/
+.pnpm-store/
+
+# Next build/cache output
+.next/
+frontend/.next/
+out/
+frontend/out/
+
+# TypeScript / tooling
+*.tsbuildinfo
+
+# Frontend env files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------
+# Local DB / misc runtime artifacts
+# -----------------------------
+*.sqlite
+*.sqlite3
+*.db
